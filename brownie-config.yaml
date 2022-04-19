@@ -1,0 +1,29 @@
+dotenv: .env
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@3.4.0
+  - aave/protocol-v2@1.0.1
+  - smartcontractkit/chainlink-brownie-contracts@1.2.0
+networks:
+  default: mainnet-fork
+  development:
+    gas_limit: auto
+    gas_price: auto
+  mainnet-fork:
+    weth_token: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    link_token: "0x514910771AF9Ca656af840dff83E8264EcF986CA"
+    dai_token: "0x6b175474e89094c44da98b954eedeac495271d0f"
+    lending_pool: "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9"
+    dai_eth: "0x773616E4d11A78F511299002da57A0a94577F1f4"
+  # AAVE testnet only work on kovan
+  kovan:
+    weth_token: "0xd0A1E359811322d97991E03f863a0C30C2cF029C"
+    link_token: "0xa36085F69e2889c224210F603D836748e7dC0088"
+    dai_token: "0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD"
+    lending_pool: "0xE0fBa4Fc209b4948668006B2bE61711b7f465bAe"
+    dai_eth: "0x22B58f1EbEDfCA50feF632bD73368b2FdA96D541"
+  # Opensea testnet only work on rinkeby
+  rinkeby:
+    link_token: "0x01BE23585060835E02B77ef475b0Cc51aA1e0709"
+    vrf_coordinator: "0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B"
+    keyhash: "0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311"
+    fee: 100000000000000000

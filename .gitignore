@@ -1,0 +1,6 @@
+/build/
+/image/
+/reports/
+/tests/
+/.env
+/script.txt
